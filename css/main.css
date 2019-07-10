@@ -43,6 +43,6 @@ ul.posts li {
     list-style: none;
 }
 
-circular-portrait {
+.circular-portrait {
     border-radius: 50%
 }        
