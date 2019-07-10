@@ -49,11 +49,12 @@ ul.posts li {
 
 #img-offset {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 30;
+    right: 30;
 }
 
 .blurb {
     position: absolute;
-    left: 0;
+    top: 30
+    left: 30;
 }
