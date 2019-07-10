@@ -46,3 +46,9 @@ ul.posts li {
 .circular-portrait {
     border-radius: 50%
 }        
+
+#img-offset {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
