@@ -1,29 +1,33 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-		</head>
-		<body>
-			<nav>
-	    		<ul>
-	        		<li><a href="/">Home</a></li>
-		        	<li><a href="/about">About</a></li>
-	        		<li><a href="/resume">Resume</a></li>
-	        		<li><a href="/projects">Projects</a></li>
-	    		</ul>
-			</nav>
-			<div class="container">
-			
-			{{ content }}
-			
-			</div><!-- /.container -->
-			<footer>
-	    		<ul>
-	        		<li><a href="mailto:landon.creel@icloud.com">email</a></li>
-	        		<li><a href="https://github.com/lwcreel">github.com/lwcreel</a></li>
-				</ul>
-			</footer>
-		</body>
-	</html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width", initial-scale="1">
+		<title>{{ page.title }}</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<nav>
+    		<ul>
+        		<li><a href="/">Home</a></li>
+	        	<li><a href="/about">About</a></li>
+        		<li><a href="/resume">Resume</a></li>
+        		<li><a href="/projects">Projects</a></li>
+    		</ul>
+		</nav>
+		<div class="container">
+		
+		{{ content }}
+		
+		</div><!-- /.container -->
+		<footer>
+    		<ul>
+        		<li><a href="mailto:landon.creel@icloud.com">email</a></li>
+        		<li><a href="https://github.com/lwcreel">github.com/lwcreel</a></li>
+			</ul>
+		</footer>
+	</body>
+</html>
