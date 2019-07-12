@@ -27,6 +27,14 @@ a:hover {
 .home {
     font-size: 1.5em;
     line-height: 1.4em;
+    font-family: 'Georgia', 'Cambria', 'Serif';
+    color: #333;
+}
+.about {
+    font-size: 1.0em;
+    line-height: 1.4em;
+    text-indent: 36px;
+    font-family: 'Georgia', 'Cambria', 'Serif';
     color: #333;
 }
 footer {
@@ -41,5 +49,11 @@ ul.posts li {
     list-style: none;
 }
 .circular-portrait {
-    border-radius: 50%
+    border-radius: 50%;
 }        
+.family-photo{
+    width: 800px;
+    height: 420px; /* hehe */
+    padding: 21px; /* Ay-Ay-Ay Whoop! */
+    align-content: center;
+}
