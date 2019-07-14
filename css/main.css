@@ -24,6 +24,18 @@ a:hover {
     font-family:'Cambria', 'Georgia', 'Serif';
     color: #500000;
 }
+
+footer {
+    border-top: 1px solid #d5d5d5;
+    font-size: .8em;
+}
+ul.posts { 
+    margin: 20px auto 40px; 
+    font-size: 1.5em;
+}
+ul.posts li {
+    list-style: none;
+}
 .home {
     font-size: 1.5em;
     line-height: 1.4em;
@@ -37,17 +49,6 @@ a:hover {
     font-family: 'Georgia', 'Cambria', 'Serif';
     color: #333;
 }
-footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
-}
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
-}
-ul.posts li {
-    list-style: none;
-}
 .circular-portrait {
     border-radius: 50%;
 }        
@@ -56,6 +57,28 @@ ul.posts li {
     height: 490px;
     padding: 21px; /* Ay-Ay-Ay Whoop! */
     align-content: center;
+}
+.prct-h1 {
+    font-size: 2.6em;
+    font-family:'Cambria', 'Georgia', 'Serif';
+    color: #500000;
+}
+.prct-img {
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+}
+.prct-txt {
+    font-size: 1.2em;
+    line-height: 2em;
+    font-family: 'Georgia', 'Cambria', 'Serif';
+    color: #333;
+}
+#prct-top {
+    font-size: 1.2em;
+    line-height: 1.4em;
+    font-family: 'Georgia', 'Cambria', 'Serif';
+    color: #333;
 }
 #landon-snow {
     border-radius: 30%;
