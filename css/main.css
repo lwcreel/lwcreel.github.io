@@ -52,8 +52,14 @@ ul.posts li {
     border-radius: 50%;
 }        
 .family-photo{
-    width: 800px;
-    height: 420px; /* hehe */
+    width: 1000px;
+    height: 490px;
     padding: 21px; /* Ay-Ay-Ay Whoop! */
     align-content: center;
+}
+#landon-snow {
+    border-radius: 30%;
+    width: 400px;
+    height: 400px;
+    padding: 21px; /* Ay-Ay-Ay Whoop! */
 }
