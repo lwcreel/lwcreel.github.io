@@ -51,6 +51,8 @@ ul.posts li {
 }
 .circular-portrait {
     border-radius: 50%;
+    height: 40%;
+    width: 6.25%;    
 }        
 .family-photo{
     width: 1000px;
