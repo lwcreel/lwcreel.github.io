@@ -1,4 +1,7 @@
 body {
+    background-color: #222;
+    color: #e6e6e6;
+    border-color: #e6e6e6;
     margin: 60px auto;
     width: 70%;
 }
@@ -22,7 +25,7 @@ a:hover {
 .greeting {
     font-size: 3em;
     font-family:'Cambria', 'Georgia', 'Serif';
-    color: #500000;
+    color: #ff9900;
 }
 
 footer {
@@ -40,14 +43,14 @@ ul.posts li {
     font-size: 1.5em;
     line-height: 1.4em;
     font-family: 'Georgia', 'Cambria', 'Serif';
-    color: #333;
+    color: #e6e6e6;
 }
 .about {
     font-size: 1.0em;
     line-height: 1.4em;
     text-indent: 36px;
     font-family: 'Georgia', 'Cambria', 'Serif';
-    color: #333;
+    color: #e6e6e6;
 }
 .circular-portrait {
     border-radius: 50%;
@@ -61,7 +64,7 @@ ul.posts li {
 .prct-h1 {
     font-size: 2.6em;
     font-family:'Cambria', 'Georgia', 'Serif';
-    color: #500000;
+    color: #ff9900;
 }
 .prct-img {
     width: 400px;
@@ -72,13 +75,13 @@ ul.posts li {
     font-size: 1.2em;
     line-height: 2em;
     font-family: 'Georgia', 'Cambria', 'Serif';
-    color: #333;
+    color: #e6e6e6;
 }
 #prct-top {
     font-size: 1.2em;
     line-height: 1.4em;
     font-family: 'Georgia', 'Cambria', 'Serif';
-    color: #333;
+    color: #e6e6e6;
 }
 #landon-snow {
     border-radius: 30%;
