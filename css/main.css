@@ -55,7 +55,7 @@ ul.posts li {
 .family-photo{
     width: 1000px;
     height: 490px;
-    padding: 21px; /* Ay-Ay-Ay Whoop! */
+    padding: 21px;
     align-content: center;
 }
 .prct-h1 {
@@ -84,5 +84,5 @@ ul.posts li {
     border-radius: 30%;
     width: 400px;
     height: 400px;
-    padding: 21px; /* Ay-Ay-Ay Whoop! */
+    padding: 21px;
 }
