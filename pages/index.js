@@ -1,48 +1,37 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
-import Link from 'next/link';
 import Date from '../components/date';
-import { getSortedPostsData } from '../lib/posts';
+import { Container } from 'react-bootstrap';
 
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
-  return {
-    props: {
-      allPostsData,
-    },
-  };
-}
-
-export default function Home({ allPostsData }) {
+export default function Home() {
   return (
     <Layout home>
+
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      
-      <section className={utilStyles.headingMd}>
-        <p>Currently trying to figure out Next.js</p>
-        <p>
-          (This is a sample website - you’ll be building a site like this on{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
-      </section>
 
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>{title}</Link>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
-          </li>
-          ))}
-        </ul>
-      </section>
+      <Container className={utilStyles.headingMd}>
+        <p>
+          <b><i>mul&bull;ti&bull;po&bull;ten&bull;tial&bull;ite:</i></b> someone with many interests
+        </p>
+
+        <p>Hello, welcome to my home page! My name is Landon Creel and I am a software engineer at Dell Technologies.</p>
+      </Container>
+
+      <Container>
+        <p>
+          I have many interests besides that, including but not limited to: TTRPGs, board games, lifting weights, running, baking, science, technology, and history.
+        </p>
+
+        <p>
+          I read and enjoy all things Sci-Fi and Fantasy. Here you will find my resume, along with links to my training log and social media.
+        </p>
+
+        <small><i>I also write things sometimes and there's a blog here.</i></small>
+      </Container>
+
     </Layout>
   );
 }

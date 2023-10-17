@@ -3,11 +3,12 @@ import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
+import { Col, Nav, Row } from 'react-bootstrap';
 
 const name = 'Landon Creel';
 export const siteTitle = 'Personal Website';
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, blog }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -59,9 +60,9 @@ export default function Layout({ children, home }) {
         )}
       </header>
       <main>{children}</main>
-      {!home && (
+      {blog && (
         <div className={styles.backToHome}>
-          <Link href="/">← Back to home</Link>
+          <Link href="/blog">← Back to blog</Link>
         </div>
       )}
     </div>
