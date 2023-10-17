@@ -21,12 +21,14 @@ export async function getStaticProps() {
 
 export default function Blog({ allPostsData }) {
 
-    <Head>
-        <title>Blog</title>
-    </Head>
+
 
     return (
         <Layout>
+            <Head>
+                <title>Landon Creel | Blog</title>
+            </Head>
+            
             <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
                 <h2 className={utilStyles.headingLg}>Blog</h2>
                 <ul className={utilStyles.list}>
