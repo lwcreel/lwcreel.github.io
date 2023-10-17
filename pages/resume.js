@@ -12,7 +12,7 @@ export default function Resume() {
 
     return <Layout>
         <Head>
-            <title>Resume</title>
+            <title>Landon Creel | Resume</title>
         </Head>
 
         {isClient ? (

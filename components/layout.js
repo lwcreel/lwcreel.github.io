@@ -3,10 +3,9 @@ import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
-import { Col, Nav, Row } from 'react-bootstrap';
 
 const name = 'Landon Creel';
-export const siteTitle = 'Personal Website';
+export const siteTitle = 'Landon Creel | Personal Website';
 
 export default function Layout({ children, home, blog }) {
   return (
@@ -15,7 +14,7 @@ export default function Layout({ children, home, blog }) {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Learning how to build a personal website using Next.js"
+          content="Landon Creel's Personal Website"
         />
         <meta
           property="og:image"

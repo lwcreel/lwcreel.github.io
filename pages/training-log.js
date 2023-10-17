@@ -8,7 +8,7 @@ export default function TrainingLog() {
     return (
         <Layout>
             <Head>
-                <title>Training Log</title>
+                <title>Landon Creel | Training Log</title>
             </Head>
 
             <p className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
