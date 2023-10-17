@@ -7,7 +7,7 @@ export default function MyFooter() {
 
     return (
         <div className="fixed-bottom">
-            <Navbar bg="dark" data-bs-theme="dark">
+            <Navbar expand="lg" bg="dark" data-bs-theme="dark">
                 <Container>
                     <Nav className="me-auto">
                         <Nav.Link href="mailto:landon.creel@icloud.com">email</Nav.Link>
