@@ -3,22 +3,27 @@ import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 import Date from '../components/date';
+import Head from "next/head";
 
 
 export async function getStaticProps() {
     const allPostsData = await getSortedPostsData();
     return {
-      props: {
-        allPostsData,
-      },
+        props: {
+            allPostsData,
+        },
     };
-  }
+}
 
 // TODO: Paginate blog posts once you've got enough
 // Also, maybe find a more maintanable method of making them? idk
 
 
 export default function Blog({ allPostsData }) {
+
+    <Head>
+        <title>Blog</title>
+    </Head>
 
     return (
         <Layout>

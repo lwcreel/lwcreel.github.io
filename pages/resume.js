@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Layout from "../components/layout";
 import { useState, useEffect } from 'react'
 
@@ -10,6 +11,10 @@ export default function Resume() {
     }, []);
 
     return <Layout>
+        <Head>
+            <title>Resume</title>
+        </Head>
+
         {isClient ? (
             <p>
                 <b>EDUCATION</b><br />
