@@ -10,6 +10,7 @@ export default function Home() {
 
       <Head>
         <title>{siteTitle}</title>
+        <meta name="google-site-verification" content="tvEO8nJc8ocIQRCwCYAVA8ssnvwJtNsJojEsQlHlYJ4" />
       </Head>
 
       <Container className={utilStyles.headingMd}>
