@@ -7,7 +7,6 @@ import Head from "next/head";
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 
-
 export async function getStaticProps() {
     const allPostsData = await getSortedPostsData();
     return {
@@ -17,11 +16,6 @@ export async function getStaticProps() {
     };
 }
 
-
-// TODO: Paginate blog posts once you've got enough
-// Also, maybe find a more maintanable method of making them? idk
-
-
 export default function Blog({ allPostsData }) {
    
     let [page, setPage] = useState(1);
@@ -30,11 +24,9 @@ export default function Blog({ allPostsData }) {
 
     const handleNext = () => {
         page + 1  > allPostsData[1] ? setPage(page) : setPage(page++);
-        console.log("page "  + page);
     }
     const handlePrev = () => {
         page - 1 > 0 ? setPage(page--) : setPage(page);
-        console.log("page " + page);
     }
 
     return (
@@ -56,9 +48,9 @@ export default function Blog({ allPostsData }) {
                         </li>
                     ))}
                 </ul>
+                <Button variant="dark" onClick={handlePrev} hidden={page == 1}>prev</Button>
+                <Button variant="dark" onClick={handleNext} hidden={page == allPostsData[1]} style={{margin: '5px'}}>next</Button>
             </section>
-            <Button variant="dark" onClick={handlePrev} hidden={page == 1}>prev</Button>
-            <Button variant="dark" onClick={handleNext} hidden={page == allPostsData[1]}>next</Button>
         </Layout>
     )
 }
