@@ -4,7 +4,7 @@ import { getSortedPostsData } from "../../lib/posts";
 import Link from "next/link";
 import Date from '../../components/date';
 import Head from "next/head";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
 
 export async function getStaticProps() {
@@ -22,12 +22,15 @@ export default function Blog({ allPostsData }) {
 
     let posts = allPostsData[0].slice((page - 1) * allPostsData[2], page * allPostsData[2]);
 
-    const handleNext = () => {
-        page + 1  > allPostsData[1] ? setPage(page) : setPage(page++);
-    }
-    const handlePrev = () => {
-        page - 1 > 0 ? setPage(page--) : setPage(page);
-    }
+    useEffect(() => {
+      posts = allPostsData[0].slice((page - 1) * allPostsData[2], page * allPostsData[2]);
+    }, [page]);
+//    const handleNext = () => {
+//        page + 1  > allPostsData[1] ? setPage(page) : setPage(page++);
+//    }
+//    const handlePrev = () => {
+//        page - 1 > 0 ? setPage(page--) : setPage(page);
+//    }
 
     return (
         <Layout>
@@ -48,8 +51,8 @@ export default function Blog({ allPostsData }) {
                         </li>
                     ))}
                 </ul>
-                <Button variant="dark" onClick={handlePrev} hidden={page == 1}>prev</Button>
-                <Button variant="dark" onClick={handleNext} hidden={page == allPostsData[1]} style={{margin: '5px'}}>next</Button>
+                <Button variant="dark" onClick={() => setPage(page - 1)} hidden={page == 1}>prev</Button>
+                <Button variant="dark" onClick={() => setPage(page + 1)} hidden={page == allPostsData[1]} style={{margin: '5px'}}>next</Button>
             </section>
         </Layout>
     )
