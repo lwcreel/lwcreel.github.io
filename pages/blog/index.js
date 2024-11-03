@@ -11,7 +11,7 @@ export async function getStaticProps() {
     const allPostsData = await getSortedPostsData();
     return {
         props: {
-            allPostsData
+          allPostsData
         }
     };
 }
@@ -25,12 +25,6 @@ export default function Blog({ allPostsData }) {
     useEffect(() => {
       posts = allPostsData[0].slice((page - 1) * allPostsData[2], page * allPostsData[2]);
     }, [page]);
-//    const handleNext = () => {
-//        page + 1  > allPostsData[1] ? setPage(page) : setPage(page++);
-//    }
-//    const handlePrev = () => {
-//        page - 1 > 0 ? setPage(page--) : setPage(page);
-//    }
 
     return (
         <Layout>
