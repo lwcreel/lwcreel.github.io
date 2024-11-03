@@ -1,7 +1,6 @@
 import MyNavbar from '../components/my-navbar';
 import '../styles/global.css'
 import MyFooter from '../components/my-footer';
-import { useEffect } from 'react';
 
 export default function App({ Component, pageProps }) {
     return (
