@@ -1,6 +1,6 @@
 ---
-title: 'Time is a Tricky Thing'
-date: '2024-09-26'
+title: "Time is a Tricky Thing"
+date: "2024-09-26"
 ---
 
 **Am I really going to have a bolded headline on every post?**
@@ -11,6 +11,7 @@ As I'm currently writing this update, it's 11:03pm on a Thursday night. I don't 
 
 The buttons, for some unholy reason, only work on a double-click. Go figure. It's a small thing, but it bothers me. That small imperfection makes it hard to appreciate the fact that this feature is done. It's something I've been stuck on for awhile (at least since my last post here), and even though I figured out a way to implement it all I can see is the imperfect button. This got away from me a little bit, sorry about that. I'm going somewhere, I promise.
 
-I think - at least for me - this roughly four hour programming and writing session is a microcosm of how I see time. It goes by faster than I think, and at the end of it is something new and cool that wouldn't exist without me, but the thing I notice is the imperfection. Missing the forest for the trees, as the saying goes. 
+I think - at least for me - this roughly four hour programming and writing session is a microcosm of how I see time. It goes by faster than I think, and at the end of it is something new and cool that wouldn't exist without me, but the thing I notice is the imperfection. Missing the forest for the trees, as the saying goes.
 
 This ended up being more introspective than my previous posts, and I'm okay with that. Ultimately, everything I write, wherever I write it, is mostly for me anyway. And I'll get around to fixing that button eventually. Probably.
+

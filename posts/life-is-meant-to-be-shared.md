@@ -1,13 +1,13 @@
 ---
-title: 'Life is Meant to be Shared'
-date: '2024-11-03'
+title: "Life is Meant to be Shared"
+date: "2024-11-03"
 ---
 
 **If a tree falls in the forest...**
 
 So I do something called bullet journaling. It's a pretty simple journalling practice that I find very helpful in organizing the myriad thoughts that occurr in my brain on a minute-by-minute basis. Without it, I'd find it much harder to juggle all the irons I've got in the fire, to mix a few idioms. Between wedding planning, work, writing, reading, training, painting minis, and learning Bengali, I've got a lot to keep track of. My bullet journal helps a lot with that (I'm going somewhere with this, I promise).
 
-Another nice thing about a bullet journal is it's a lot more than just a to-do list. It also creates the space for me to just jot down thoughts that occur (an *extremely* useful tool for writers and the source of my next post as well as this one). This post comes from something I wrote down in the middle of an unplanned, last-minute flight to Houston for a family emergency. That thing I wrote down is the title of this post.
+Another nice thing about a bullet journal is it's a lot more than just a to-do list. It also creates the space for me to just jot down thoughts that occur (an _extremely_ useful tool for writers and the source of my next post as well as this one). This post comes from something I wrote down in the middle of an unplanned, last-minute flight to Houston for a family emergency. That thing I wrote down is the title of this post.
 
 I truly, fundamentally believe that life is meant to be shared.
 
