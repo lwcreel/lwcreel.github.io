@@ -1,21 +1,18 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import styles from '../styles/layout.module.css';
-import utilStyles from '../styles/utils.module.css';
-import Link from 'next/link';
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/layout.module.css";
+import utilStyles from "../styles/utils.module.css";
+import Link from "next/link";
 
-const name = 'Landon Creel';
-export const siteTitle = 'Landon Creel | Personal Website';
+const name = "Landon Creel";
+export const siteTitle = "Landon Creel | Personal Website";
 
 export default function Layout({ children, home, blog }) {
   return (
     <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="Landon Creel's Personal Website"
-        />
+        <meta name="description" content="Landon Creel's Personal Website" />
         <meta
           property="og:image"
           content={`https://og-image.vercel.app/${encodeURI(
@@ -68,3 +65,4 @@ export default function Layout({ children, home, blog }) {
     </div>
   );
 }
+
