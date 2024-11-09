@@ -1,15 +1,10 @@
 import Link from "next/link";
-import Layout from "../components/layout";
-import utilStyles from "../styles/utils.module.css";
-import Head from "next/head";
+import Layout from "../../components/layout";
+import utilStyles from "../../styles/utils.module.css";
 
 export default function TrainingLog() {
   return (
     <Layout>
-      <Head>
-        <title>Landon Creel | Training Log</title>
-      </Head>
-
       <p className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         My training log, maintained on Blogger, can be found here:{" "}
         <Link href="https://mxaofnature.blogspot.com/">Training Log</Link>.
@@ -34,4 +29,3 @@ export default function TrainingLog() {
     </Layout>
   );
 }
-
