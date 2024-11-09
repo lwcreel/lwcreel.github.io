@@ -1,20 +1,10 @@
-import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout";
+import Layout from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
-import Date from "../components/date";
 import { Container } from "react-bootstrap";
 
 export default function Home() {
   return (
     <Layout home>
-      <Head>
-        <title>{siteTitle}</title>
-        <meta
-          name="google-site-verification"
-          content="tvEO8nJc8ocIQRCwCYAVA8ssnvwJtNsJojEsQlHlYJ4"
-        />
-      </Head>
-
       <Container className={utilStyles.headingMd}>
         <p>
           <b>
