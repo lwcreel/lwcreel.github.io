@@ -1,12 +1,8 @@
-import Head from "next/head";
 import Layout from "../../components/layout";
 
 export default function Resume() {
   return (
     <Layout>
-      <Head>
-        <title>Landon Creel | Resume</title>
-      </Head>
       <b>EDUCATION</b>
       <br />
       Texas A&M University May 2021 <br />
