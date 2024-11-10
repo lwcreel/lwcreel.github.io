@@ -1,8 +1,11 @@
 import Layout from "../../../components/layout";
 import Date from "../../../components/date";
 import utilStyles from "../../../styles/utils.module.css";
+import { getPostData } from "../../../lib/posts";
 
-export default async function RenderPage({ postData }) {
+export default async function RenderPage({ params }) {
+  let postData = await getPostData(await params);
+
   return (
     <Layout blog>
       <article>
