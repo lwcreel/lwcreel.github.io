@@ -1,29 +1,30 @@
-import Head from "next/head";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import {
+  NavbarCollapse,
+  Container,
+  Nav,
+  NavbarBrand,
+  Navbar,
+  NavLink,
+  NavbarToggle,
+} from "react-bootstrap";
 
-function MyNavbar() {
+export default function MyNavbar() {
   return (
     <div className="fixed-top">
       <Navbar expand="lg" bg="dark" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="/">Landon Creel</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
+          <NavbarBrand href="/">Landon Creel</NavbarBrand>
+          <NavbarToggle aria-controls="basic-navbar-nav" />
+          <NavbarCollapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/resume">Resume</Nav.Link>
-              <Nav.Link href="/training-log">Training Log</Nav.Link>
-              <Nav.Link href="/blog">Blog</Nav.Link>
+              <NavLink href="/">Home</NavLink>
+              <NavLink href="/resume">Resume</NavLink>
+              <NavLink href="/training-log">Training Log</NavLink>
+              <NavLink href="/blog">Blog</NavLink>
             </Nav>
-          </Navbar.Collapse>
+          </NavbarCollapse>
         </Container>
       </Navbar>
     </div>
   );
 }
-
-export default MyNavbar;
-

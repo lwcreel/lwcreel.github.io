@@ -51,4 +51,3 @@ export default function Layout({ children, home, blog }) {
     </div>
   );
 }
-
