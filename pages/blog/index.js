@@ -1,13 +1,22 @@
-"use client";
-
 import Layout from "../../components/layout";
 import utilStyles from "../../styles/utils.module.css";
+import { getSortedPostsData } from "../../lib/posts";
 import Link from "next/link";
 import Date from "../../components/date";
+import Head from "next/head";
 import { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
 
-export default function RenderBlog({ allPostsData }) {
+export async function getStaticProps() {
+  const allPostsData = await getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+}
+
+export default function Blog({ allPostsData }) {
   let [page, setPage] = useState(1);
 
   let posts = allPostsData[0].slice(
@@ -24,6 +33,10 @@ export default function RenderBlog({ allPostsData }) {
 
   return (
     <Layout>
+      <Head>
+        <title>Landon Creel | Blog</title>
+      </Head>
+
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>

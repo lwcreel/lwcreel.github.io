@@ -1,29 +1,25 @@
-import {
-  NavbarCollapse,
-  Container,
-  Nav,
-  Navbar,
-  NavLink,
-  NavbarToggle,
-} from "react-bootstrap";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 
 export default function MyFooter() {
   return (
     <>
       <Navbar expand="lg" bg="dark" data-bs-theme="dark" fixed="bottom">
         <Container fluid>
-          <NavbarToggle aria-controls="basic-navbar-nav" />
-          <NavbarCollapse id="basic-navbar-nav">
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <NavLink href="mailto:landon.creel@icloud.com">email</NavLink>
-              <NavLink href="https://github.com/lwcreel">GitHub</NavLink>
-              <NavLink href="https://www.linkedin.com/in/landon-creel-149859177">
+              <Nav.Link href="mailto:landon.creel@icloud.com">email</Nav.Link>
+              <Nav.Link href="https://github.com/lwcreel">GitHub</Nav.Link>
+              <Nav.Link href="https://www.linkedin.com/in/landon-creel-149859177">
                 LinkedIn
-              </NavLink>
+              </Nav.Link>
             </Nav>
-          </NavbarCollapse>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
     </>
   );
 }
+
