@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Layout from "../../components/layout";
-import utilStyles from "../../styles/utils.module.css";
+import Layout from "../components/layout";
+import utilStyles from "../styles/utils.module.css";
 import Head from "next/head";
 
 export default function TrainingLog() {
@@ -34,3 +34,4 @@ export default function TrainingLog() {
     </Layout>
   );
 }
+
