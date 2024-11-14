@@ -14,4 +14,3 @@ The buttons, for some unholy reason, only work on a double-click. Go figure. It'
 I think - at least for me - this roughly four hour programming and writing session is a microcosm of how I see time. It goes by faster than I think, and at the end of it is something new and cool that wouldn't exist without me, but the thing I notice is the imperfection. Missing the forest for the trees, as the saying goes.
 
 This ended up being more introspective than my previous posts, and I'm okay with that. Ultimately, everything I write, wherever I write it, is mostly for me anyway. And I'll get around to fixing that button eventually. Probably.
-
