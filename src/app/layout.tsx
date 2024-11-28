@@ -1,8 +1,8 @@
 import MyNavbar from "../components/my-navbar";
 import "../../styles/global.css";
 import MyFooter from "../components/my-footer";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 
-// TODO: Have title be per page, not global
 export const metadata = {
   description: "Landon Creel's Personal Website and Blog",
   verification: {
@@ -26,6 +26,8 @@ export default function RootLayout({ children }: any) {
           <MyFooter />
         </div>
       </body>
+      <GoogleAnalytics gaId="G-6GK49PEZD7" />
+      <GoogleTagManager gtmId="G-6GK49PEZD7" />
     </html>
   );
 }
