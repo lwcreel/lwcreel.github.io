@@ -3,8 +3,15 @@ import Date from "../../../components/date";
 import utilStyles from "../../../../styles/utils.module.css";
 import { getPostData } from "../../../lib/posts";
 
+type PostData = {
+  id: string;
+  title: string;
+  date: string;
+  contentHtml: string;
+};
+
 export default async function RenderPage({ params }: any) {
-  let postData = await getPostData(await params);
+  let postData: PostData = await getPostData(await params);
 
   return (
     <Layout blog>
