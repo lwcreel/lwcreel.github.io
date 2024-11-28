@@ -4,7 +4,6 @@ import MyFooter from "../components/my-footer";
 
 // TODO: Have title be per page, not global
 export const metadata = {
-  title: "Landon Creel | Personal Website",
   description: "Landon Creel's Personal Website and Blog",
   verification: {
     google: "tvEO8nJc8ocIQRCwCYAVA8ssnvwJtNsJojEsQlHlYJ4",
