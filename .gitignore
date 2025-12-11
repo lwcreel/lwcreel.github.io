@@ -35,3 +35,7 @@ yarn-error.log*
 
 # scripts
 *.tsv
+
+# sqlite
+*.db-shm
+*.db-wal
