@@ -3,7 +3,6 @@ import { getPostByTitle } from '$lib/server/blog';
 import Post from '$lib/types/Post';
 
 export const load: PageServerLoad = ({ params }) => {
-	console.log('Test:' + decodeURIComponent(params.slug));
 	let post: Post = getPostByTitle(decodeURIComponent(params.slug));
 
 	return {
