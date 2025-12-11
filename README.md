@@ -1,7 +1,7 @@
 # Welcome to lwcreel.github.io 👋
 ![Version](https://img.shields.io/badge/version-2.0.0-blue.svg?cacheSeconds=2592000)
 
-> This project houses my personal website and blog. It is built using SvelteKit, Postgres and Tailwind.
+> This project houses my personal website and blog. It is built using SvelteKit, SQLite3 and Tailwind, which is prerendered to statically generate the final site.
 
 ### 🏠 [Homepage](lwcreel.github.io)
 
