@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.blog-img {
+	@apply mx-auto w-1/3 h-auto p-4
+}
