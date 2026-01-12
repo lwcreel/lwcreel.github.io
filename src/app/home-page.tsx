@@ -15,7 +15,7 @@ export default function Home() {
 
         <p>
           Hello, welcome to my home page! My name is Landon Creel and I am a
-          software engineer at Dell Technologies.
+          software engineer with a background in API design and development.
         </p>
       </Container>
 
