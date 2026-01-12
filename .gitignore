@@ -12,6 +12,10 @@
 /.next/
 /out/
 
+# production
+/build
+/dist
+
 # misc
 .DS_Store
 
@@ -35,25 +39,3 @@ yarn-error.log*
 # sqlite
 *.db-shm
 *.db-wal
-
-# Output
-.output
-.vercel
-.netlify
-.wrangler
-/.svelte-kit
-/build
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Env
-.env
-.env.*
-!.env.example
-!.env.test
-
-# Vite
-vite.config.js.timestamp-*
-vite.config.ts.timestamp-*
