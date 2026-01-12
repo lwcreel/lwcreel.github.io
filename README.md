@@ -1,11 +1,12 @@
 # Welcome to lwcreel.github.io 👋
-![Version](https://img.shields.io/badge/version-2.0.0-blue.svg?cacheSeconds=2592000)
 
-> This project houses my personal website and blog. It is built using SvelteKit, Postgres and Tailwind.
+![Prerequisite](https://img.shields.io/badge/node-%3E%3D18-blue.svg)
 
-### 🏠 [Homepage](lwcreel.github.io)
+> This project houses my personal website and blog. It is built using Next.js and JavaScript along with BootStrap styling.
 
-### ✨ [Demo](lwcreel.github.io)
+## Prerequisites
+
+- node >=18
 
 ## Install
 
@@ -23,14 +24,15 @@ npm run start
 
 👤 **Landon Creel**
 
-* Website: lwcreel.github.io
-* Github: [@lwcreel](https://github.com/lwcreel)
-* LinkedIn: [@landoncreel](https://linkedin.com/in/landoncreel)
+- Website: https://lwcreel.github.io
+- Github: [@lwcreel](https://github.com/lwcreel)
+- LinkedIn: [@Landon Creel](https://linkedin.com/in/landon-creel-149859177)
 
 ## Show your support
 
 Give a ⭐️ if this project helped you!
 
+---
 
-***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+
