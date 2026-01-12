@@ -24,7 +24,7 @@ export default function Resume() {
       <br />
       <b>EXPERIENCE</b>
       <br />
-      <b>Software Engineer II</b> (August 2021 - Present)
+      <b>Software Engineer II</b> (August 2021 - October 2025)
       <br />
       <i>Dell Technologies</i>
       <br />
