@@ -1,11 +1,21 @@
 import Layout from "../../components/layout";
 import styles from "../../../styles/resume.module.css";
+import type { Metadata } from "next";
+import type { ReactNode } from "react";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Resume",
 };
 
-function Entry({ title, dates, org, children }: any) {
+type EntryProps = {
+  title: string;
+  dates?: string;
+  org: string;
+  /** The <li> bullet points */
+  children: ReactNode;
+};
+
+function Entry({ title, dates, org, children }: EntryProps) {
   return (
     <>
       <h3 className={styles.entry}>

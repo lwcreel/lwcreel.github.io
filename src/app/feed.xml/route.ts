@@ -14,7 +14,7 @@ function escapeXml(text: string) {
 }
 
 export function GET() {
-  const [posts] = getSortedPostsData() as [any[], number, number];
+  const { posts } = getSortedPostsData();
 
   const items = posts
     .map((post) => {

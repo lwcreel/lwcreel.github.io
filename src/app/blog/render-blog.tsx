@@ -5,22 +5,34 @@ import utilStyles from "../../../styles/utils.module.css";
 import Link from "next/link";
 import FormattedDate from "../../components/formatted-date";
 import { useSearchParams } from "next/navigation";
+// Type-only import: posts.ts reads the filesystem and must not be bundled
+// into this client component.
+import type { PostList } from "../../lib/posts";
+
+type PaginatedBlogProps = {
+  postList: PostList;
+};
+
+type RenderBlogProps = {
+  postList: PostList;
+  /** 1-based page number, already clamped to a valid page */
+  page: number;
+};
 
 // Reads the current page from the URL (/blog?page=2), so refresh and Back work.
 // Must render inside a <Suspense> boundary because it uses useSearchParams.
-export function PaginatedBlog({ allPostsData }: any) {
+export function PaginatedBlog({ postList }: PaginatedBlogProps) {
   const searchParams = useSearchParams();
-  const pageCount = allPostsData[1];
   const requested = parseInt(searchParams.get("page") ?? "1", 10);
   const page = Number.isNaN(requested)
     ? 1
-    : Math.min(Math.max(requested, 1), Math.max(pageCount, 1));
+    : Math.min(Math.max(requested, 1), Math.max(postList.pageCount, 1));
 
-  return <RenderBlog allPostsData={allPostsData} page={page} />;
+  return <RenderBlog postList={postList} page={page} />;
 }
 
-export default function RenderBlog({ allPostsData, page }: any) {
-  const [allPosts, pageCount, postsPerPage] = allPostsData;
+export default function RenderBlog({ postList, page }: RenderBlogProps) {
+  const { posts: allPosts, pageCount, postsPerPage } = postList;
   const posts = allPosts.slice((page - 1) * postsPerPage, page * postsPerPage);
 
   return (
@@ -28,7 +40,7 @@ export default function RenderBlog({ allPostsData, page }: any) {
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
-          {posts.map(({ id, date, title }: any) => (
+          {posts.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/blog/${id}`}>{title}</Link>
               <br />

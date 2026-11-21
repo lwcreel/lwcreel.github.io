@@ -4,6 +4,7 @@ import "../../styles/global.css";
 import MyFooter from "../components/my-footer";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { SITE_URL } from "../lib/site";
 
 export const metadata: Metadata = {
@@ -26,7 +27,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: any) {
+export default function RootLayout({
+  children,
+}: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="en">
       <body>

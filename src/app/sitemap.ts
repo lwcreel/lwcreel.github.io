@@ -6,7 +6,7 @@ import { SITE_URL } from "../lib/site";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const [posts] = getSortedPostsData() as [any[], number, number];
+  const { posts } = getSortedPostsData();
 
   const pages = ["", "/resume", "/training-log", "/blog"].map((path) => ({
     url: `${SITE_URL}${path}`,
