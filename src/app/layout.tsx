@@ -1,7 +1,7 @@
 import MyNavbar from "../components/my-navbar";
 import "../../styles/global.css";
 import MyFooter from "../components/my-footer";
-import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata = {
   description: "Landon Creel's Personal Website and Blog",
@@ -27,7 +27,6 @@ export default function RootLayout({ children }: any) {
         </div>
       </body>
       <GoogleAnalytics gaId="G-6GK49PEZD7" />
-      <GoogleTagManager gtmId="G-6GK49PEZD7" />
     </html>
   );
 }

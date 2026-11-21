@@ -8,7 +8,7 @@ Personal website and blog for Landon Creel, built with Next.js (App Router), Typ
 
 ## Commands
 
-- `npm install` — install dependencies (Node 20, per `.nvmrc`)
+- `npm install` — install dependencies (Node 24, per `.nvmrc`)
 - `npm run dev` — local dev server
 - `npm run build` — static export to `./out` (this is also what CI runs; use it to catch type/build errors)
 
