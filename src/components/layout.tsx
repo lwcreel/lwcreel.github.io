@@ -4,7 +4,6 @@ import utilStyles from "../../styles/utils.module.css";
 import Link from "next/link";
 
 const name = "Landon Creel";
-export const siteTitle = "Landon Creel | Personal Website";
 
 export default function Layout({ children, home, blog }: any) {
   return (
@@ -31,7 +30,7 @@ export default function Layout({ children, home, blog }: any) {
                 className={utilStyles.borderCircle}
                 height={108}
                 width={108}
-                alt=""
+                alt="Home"
               />
             </Link>
             <h2 className={utilStyles.headingLg}>

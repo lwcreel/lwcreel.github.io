@@ -3,7 +3,7 @@ import Layout from "../../components/layout";
 import utilStyles from "../../../styles/utils.module.css";
 
 export const metadata = {
-  title: "Landon Creel | Training Log",
+  title: "Training Log",
 };
 
 export default function TrainingLog() {

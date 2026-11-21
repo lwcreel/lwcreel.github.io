@@ -3,7 +3,7 @@ import { getSortedPostsData } from "../../lib/posts";
 import RenderBlog, { PaginatedBlog } from "./render-blog";
 
 export const metadata = {
-  title: "Landon Creel | Blog",
+  title: "Blog",
 };
 
 export default async function Blog() {

@@ -1,10 +1,26 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import MyNavbar from "../components/my-navbar";
 import "../../styles/global.css";
 import MyFooter from "../components/my-footer";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import type { Metadata } from "next";
+import { SITE_URL } from "../lib/site";
 
-export const metadata = {
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Landon Creel | Personal Website",
+    // Pages set just their own name, e.g. title: "Blog"
+    template: "Landon Creel | %s",
+  },
   description: "Landon Creel's Personal Website and Blog",
+  openGraph: {
+    siteName: "Landon Creel",
+    type: "website",
+  },
+  alternates: {
+    types: { "application/rss+xml": "/feed.xml" },
+  },
   verification: {
     google: "tvEO8nJc8ocIQRCwCYAVA8ssnvwJtNsJojEsQlHlYJ4",
   },
@@ -15,12 +31,6 @@ export default function RootLayout({ children }: any) {
     <html lang="en">
       <body>
         <div>
-          <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-            integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-            crossOrigin="anonymous"
-          />
           <MyNavbar />
           {children}
           <MyFooter />

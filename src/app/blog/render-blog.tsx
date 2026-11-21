@@ -3,7 +3,7 @@
 import Layout from "../../components/layout";
 import utilStyles from "../../../styles/utils.module.css";
 import Link from "next/link";
-import Date from "../../components/date";
+import FormattedDate from "../../components/formatted-date";
 import { useSearchParams } from "next/navigation";
 
 // Reads the current page from the URL (/blog?page=2), so refresh and Back work.
@@ -33,7 +33,7 @@ export default function RenderBlog({ allPostsData, page }: any) {
               <Link href={`/blog/${id}`}>{title}</Link>
               <br />
               <small className={utilStyles.lightText}>
-                <Date dateString={date} />
+                <FormattedDate dateString={date} />
               </small>
             </li>
           ))}
