@@ -1,8 +1,9 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Layout from "../../components/layout";
 import utilStyles from "../../../styles/utils.module.css";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Training Log",
 };
 

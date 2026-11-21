@@ -1,22 +1,24 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { getAllPostIds, getPostData } from "../../../lib/posts";
 import RenderPage from "./render-page";
 
-export async function generateStaticParams() {
-  const posts = await getAllPostIds().then((res) => res);
+type PostPageProps = {
+  params: Promise<{ id: string }>;
+};
 
-  return posts.map((post) => ({
-    id: post.params.id,
-  }));
+export function generateStaticParams(): { id: string }[] {
+  return getAllPostIds().map((id) => ({ id }));
 }
 
-export async function generateMetadata({ params }: any): Promise<Metadata> {
-  const id = (await params).id;
-  const postData: any = await getPostData(await id);
+export async function generateMetadata({
+  params,
+}: PostPageProps): Promise<Metadata> {
+  const { id } = await params;
+  const post = await getPostData(id);
 
   return {
-    title: postData.title,
-    description: postData.description,
+    title: post.title,
+    description: post.description,
     // Nested objects here replace (not merge with) the root layout's,
     // so repeat the RSS link and site name.
     alternates: {
@@ -26,15 +28,15 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
     openGraph: {
       siteName: "Landon Creel",
       type: "article",
-      title: postData.title,
-      description: postData.description,
+      title: post.title,
+      description: post.description,
       url: `/blog/${id}`,
-      publishedTime: postData.date,
+      publishedTime: post.date,
     },
   };
 }
 
-export default async function Page({ params }: any) {
+export default async function Page({ params }: PostPageProps) {
   const { id } = await params;
-  return <RenderPage params={id} />;
+  return <RenderPage id={id} />;
 }

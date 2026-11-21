@@ -2,10 +2,19 @@ import Image from "next/image";
 import styles from "../../styles/layout.module.css";
 import utilStyles from "../../styles/utils.module.css";
 import Link from "next/link";
+import type { ReactNode } from "react";
 
 const name = "Landon Creel";
 
-export default function Layout({ children, home, blog }: any) {
+type LayoutProps = {
+  children: ReactNode;
+  /** Home page: large photo and name as the page <h1> */
+  home?: boolean;
+  /** Blog post: adds a "Back to blog" link */
+  blog?: boolean;
+};
+
+export default function Layout({ children, home, blog }: LayoutProps) {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
