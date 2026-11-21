@@ -4,23 +4,24 @@ import Layout from "../../components/layout";
 import utilStyles from "../../../styles/utils.module.css";
 import Link from "next/link";
 import Date from "../../components/date";
-import { useState, useEffect } from "react";
-import { Button } from "react-bootstrap";
+import { useSearchParams } from "next/navigation";
 
-export default function RenderBlog({ allPostsData }: any) {
-  let [page, setPage] = useState(1);
+// Reads the current page from the URL (/blog?page=2), so refresh and Back work.
+// Must render inside a <Suspense> boundary because it uses useSearchParams.
+export function PaginatedBlog({ allPostsData }: any) {
+  const searchParams = useSearchParams();
+  const pageCount = allPostsData[1];
+  const requested = parseInt(searchParams.get("page") ?? "1", 10);
+  const page = Number.isNaN(requested)
+    ? 1
+    : Math.min(Math.max(requested, 1), Math.max(pageCount, 1));
 
-  let posts = allPostsData[0].slice(
-    (page - 1) * allPostsData[2],
-    page * allPostsData[2],
-  );
+  return <RenderBlog allPostsData={allPostsData} page={page} />;
+}
 
-  useEffect(() => {
-    posts = allPostsData[0].slice(
-      (page - 1) * allPostsData[2],
-      page * allPostsData[2],
-    );
-  }, [page]);
+export default function RenderBlog({ allPostsData, page }: any) {
+  const [allPosts, pageCount, postsPerPage] = allPostsData;
+  const posts = allPosts.slice((page - 1) * postsPerPage, page * postsPerPage);
 
   return (
     <Layout>
@@ -37,21 +38,23 @@ export default function RenderBlog({ allPostsData }: any) {
             </li>
           ))}
         </ul>
-        <Button
-          variant="dark"
-          onClick={() => setPage(page - 1)}
-          hidden={page == 1}
-        >
-          prev
-        </Button>
-        <Button
-          variant="dark"
-          onClick={() => setPage(page + 1)}
-          hidden={page == allPostsData[1]}
-          style={{ margin: "5px" }}
-        >
-          next
-        </Button>
+        {page > 1 && (
+          <Link
+            className="btn btn-dark"
+            href={page - 1 === 1 ? "/blog" : `/blog?page=${page - 1}`}
+          >
+            prev
+          </Link>
+        )}
+        {page < pageCount && (
+          <Link
+            className="btn btn-dark"
+            href={`/blog?page=${page + 1}`}
+            style={{ margin: "5px" }}
+          >
+            next
+          </Link>
+        )}
       </section>
     </Layout>
   );

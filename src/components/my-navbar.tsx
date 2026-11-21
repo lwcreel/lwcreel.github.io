@@ -14,8 +14,8 @@ export default function MyNavbar() {
       <Navbar expand="lg" bg="dark" data-bs-theme="dark">
         <Container>
           <NavbarBrand href="/">Landon Creel</NavbarBrand>
-          <NavbarToggle aria-controls="basic-navbar-nav" />
-          <NavbarCollapse id="basic-navbar-nav">
+          <NavbarToggle aria-controls="site-navbar-nav" />
+          <NavbarCollapse id="site-navbar-nav">
             <Nav className="me-auto">
               <NavLink href="/">Home</NavLink>
               <NavLink href="/resume">Resume</NavLink>
