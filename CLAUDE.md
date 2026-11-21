@@ -22,5 +22,5 @@ There is no test suite or linter configured.
   - `getSortedPostsData()` returns a tuple `[sortedPosts, pageCount, POSTS_PER_PAGE]` (not an object) — consumed by `src/app/blog/render-blog.tsx`, which paginates client-side from the `?page=N` query string. Because that uses `useSearchParams`, `src/app/blog/page.tsx` wraps it in `<Suspense>` with page 1 as the fallback, which is what ends up in the static HTML.
   - `src/app/blog/[id]/page.tsx` uses `generateStaticParams` over `getAllPostIds()` to pre-render every post.
 - **Pages:** each route in `src/app/` has a thin `page.tsx` (sets `metadata`, title pattern `"Landon Creel | <Page>"`) that renders a separate component (`home-page.tsx`, `render-blog.tsx`, `render-page.tsx`). Page bodies are wrapped in `src/components/layout.tsx`.
-- **Root layout** (`src/app/layout.tsx`) loads Bootstrap CSS from a CDN, the navbar/footer, and Google Analytics.
+- **Root layout** (`src/app/layout.tsx`) imports Bootstrap CSS from the `bootstrap` npm package, renders the navbar/footer, and Google Analytics.
 - **Styles:** CSS modules live in the top-level `styles/` directory (not under `src/`), imported via relative paths. Static assets (resume PDF, images) are in `public/`.
