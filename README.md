@@ -1,38 +1,47 @@
-# Welcome to lwcreel.github.io 👋
+# lwcreel.github.io
 
-![Prerequisite](https://img.shields.io/badge/node-%3E%3D18-blue.svg)
-
-> This project houses my personal website and blog. It is built using Next.js and JavaScript along with BootStrap styling.
+My personal website and blog, built with Next.js, TypeScript, and React Bootstrap, and deployed as a static site to GitHub Pages at https://lwcreel.github.io.
 
 ## Prerequisites
 
-- node >=18
+- Node.js 20 or later (see `.nvmrc`)
 
-## Install
+## Development
 
 ```sh
 npm install
+npm run dev
 ```
 
-## Usage
+The dev server runs at http://localhost:3000.
+
+## Build
 
 ```sh
-npm run start
+npm run build
 ```
+
+This produces a static export in `./out`.
+
+## Writing a blog post
+
+Add a Markdown file to `posts/`. The filename becomes the URL (`posts/my-post.md` → `/blog/my-post`). Each post needs frontmatter:
+
+```md
+---
+title: "My Post"
+date: "2026-01-21"
+---
+```
+
+## Deployment
+
+Pushing to `main` triggers the GitHub Actions workflow in `.github/workflows/nextjs.yml`, which builds the site and publishes `./out` to GitHub Pages. It can also be run manually from the Actions tab.
 
 ## Author
 
-👤 **Landon Creel**
+**Landon Creel**
 
 - Website: https://lwcreel.github.io
-- Github: [@lwcreel](https://github.com/lwcreel)
-- LinkedIn: [@Landon Creel](https://linkedin.com/in/landon-creel-149859177)
-
-## Show your support
-
-Give a ⭐️ if this project helped you!
-
----
-
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
-
+- GitHub: [@lwcreel](https://github.com/lwcreel)
+- LinkedIn: [Landon Creel](https://linkedin.com/in/landon-creel-149859177)
