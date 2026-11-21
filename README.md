@@ -4,7 +4,7 @@ My personal website and blog, built with Next.js, TypeScript, and React Bootstra
 
 ## Prerequisites
 
-- Node.js 20 or later (see `.nvmrc`)
+- Node.js 24 or later (see `.nvmrc`)
 
 ## Development
 

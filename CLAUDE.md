@@ -8,7 +8,7 @@ Personal website and blog for Landon Creel, built with Next.js (App Router), Typ
 
 ## Commands
 
-- `npm install` — install dependencies (Node 20, per `.nvmrc`)
+- `npm install` — install dependencies (Node 24, per `.nvmrc`)
 - `npm run dev` — local dev server
 - `npm run build` — static export to `./out` (this is also what CI runs; use it to catch type/build errors)
 
@@ -22,5 +22,5 @@ There is no test suite or linter configured.
   - `getSortedPostsData()` returns a tuple `[sortedPosts, pageCount, POSTS_PER_PAGE]` (not an object) — consumed by the client component `src/app/blog/render-blog.tsx`, which paginates client-side.
   - `src/app/blog/[id]/page.tsx` uses `generateStaticParams` over `getAllPostIds()` to pre-render every post.
 - **Pages:** each route in `src/app/` has a thin `page.tsx` (sets `metadata`, title pattern `"Landon Creel | <Page>"`) that renders a separate component (`home-page.tsx`, `render-blog.tsx`, `render-page.tsx`). Page bodies are wrapped in `src/components/layout.tsx`.
-- **Root layout** (`src/app/layout.tsx`) loads Bootstrap CSS from a CDN, the navbar/footer, and Google Analytics/Tag Manager.
+- **Root layout** (`src/app/layout.tsx`) loads Bootstrap CSS from a CDN, the navbar/footer, and Google Analytics.
 - **Styles:** CSS modules live in the top-level `styles/` directory (not under `src/`), imported via relative paths. Static assets (resume PDF, images) are in `public/`.
